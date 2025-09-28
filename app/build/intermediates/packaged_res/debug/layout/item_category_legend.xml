@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:padding="4dp">
+
+    <!-- Color indicator -->
+    <View
+        android:id="@+id/color_indicator"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginEnd="6dp"
+        android:background="@android:color/black" />
+
+    <!-- Category name -->
+    <TextView
+        android:id="@+id/category_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Category"
+        android:textSize="11sp"
+        android:textColor="@android:color/black"
+        android:singleLine="true"
+        android:ellipsize="none"
+        android:layout_marginEnd="8dp" />
+
+    <!-- Percentage -->
+    <TextView
+        android:id="@+id/category_percentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0%"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:textColor="#4A4A4A" />
+
+</LinearLayout>

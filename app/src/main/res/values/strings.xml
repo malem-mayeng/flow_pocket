@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Flow Pocket</string>
+    <string name="set_income">Set Monthly Income</string>
+    <string name="statistics">Statistics</string>
+    <string name="monthly_income">Monthly Income (₹)</string>
+    <string name="add_expense">Add Expense</string>
+    <string name="expense_name">Expense Name</string>
+    <string name="amount">Amount</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+</resources>

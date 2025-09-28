@@ -1,0 +1,162 @@
+[
+    {
+        "merged": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-merged_res-35:/layout_item_budget_category.xml.flat",
+        "source": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-main-37:/layout/item_budget_category.xml"
+    },
+    {
+        "merged": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-merged_res-35:/drawable_nav_button_background.xml.flat",
+        "source": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-main-37:/drawable/nav_button_background.xml"
+    },
+    {
+        "merged": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-merged_res-35:/xml_data_extraction_rules.xml.flat",
+        "source": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-main-37:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-merged_res-35:/layout_activity_main.xml.flat",
+        "source": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-main-37:/layout/activity_main.xml"
+    },
+    {
+        "merged": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-merged_res-35:/layout_expense_item.xml.flat",
+        "source": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-main-37:/layout/expense_item.xml"
+    },
+    {
+        "merged": "com.flowpocket.app-merged_res-35:/layout_activity_main.xml.flat",
+        "source": "com.flowpocket.app-main-37:/layout/activity_main.xml"
+    },
+    {
+        "merged": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-merged_res-35:/xml_backup_rules.xml.flat",
+        "source": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-main-37:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-merged_res-35:/mipmap-hdpi_ic_launcher.xml.flat",
+        "source": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-main-37:/mipmap-hdpi/ic_launcher.xml"
+    },
+    {
+        "merged": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-merged_res-35:/mipmap-xhdpi_ic_launcher.xml.flat",
+        "source": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-main-37:/mipmap-xhdpi/ic_launcher.xml"
+    },
+    {
+        "merged": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-merged_res-35:/layout_activity_statistics.xml.flat",
+        "source": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-main-37:/layout/activity_statistics.xml"
+    },
+    {
+        "merged": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-merged_res-35:/mipmap-mdpi_ic_launcher.xml.flat",
+        "source": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-main-37:/mipmap-mdpi/ic_launcher.xml"
+    },
+    {
+        "merged": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-merged_res-35:/layout_dialog_category_management.xml.flat",
+        "source": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-main-37:/layout/dialog_category_management.xml"
+    },
+    {
+        "merged": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-merged_res-35:/layout_activity_category_chart.xml.flat",
+        "source": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-main-37:/layout/activity_category_chart.xml"
+    },
+    {
+        "merged": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-merged_res-35:/layout_dialog_add_expense.xml.flat",
+        "source": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-main-37:/layout/dialog_add_expense.xml"
+    },
+    {
+        "merged": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-merged_res-35:/layout_item_expense.xml.flat",
+        "source": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-main-37:/layout/item_expense.xml"
+    },
+    {
+        "merged": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-merged_res-35:/drawable_month_year_picker_background.xml.flat",
+        "source": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-main-37:/drawable/month_year_picker_background.xml"
+    },
+    {
+        "merged": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-merged_res-35:/drawable_picker_column_background.xml.flat",
+        "source": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-main-37:/drawable/picker_column_background.xml"
+    },
+    {
+        "merged": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-merged_res-35:/drawable_circle_background.xml.flat",
+        "source": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-main-37:/drawable/circle_background.xml"
+    },
+    {
+        "merged": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-merged_res-35:/mipmap-xhdpi_ic_launcher_round.xml.flat",
+        "source": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-main-37:/mipmap-xhdpi/ic_launcher_round.xml"
+    },
+    {
+        "merged": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-merged_res-35:/layout_activity_budget_management.xml.flat",
+        "source": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-main-37:/layout/activity_budget_management.xml"
+    },
+    {
+        "merged": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-merged_res-35:/drawable_rounded_background.xml.flat",
+        "source": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-main-37:/drawable/rounded_background.xml"
+    },
+    {
+        "merged": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-merged_res-35:/layout_dialog_edit_expense.xml.flat",
+        "source": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-main-37:/layout/dialog_edit_expense.xml"
+    },
+    {
+        "merged": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-merged_res-35:/layout_activity_all_expenses.xml.flat",
+        "source": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-main-37:/layout/activity_all_expenses.xml"
+    },
+    {
+        "merged": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-merged_res-35:/layout_activity_chart.xml.flat",
+        "source": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-main-37:/layout/activity_chart.xml"
+    },
+    {
+        "merged": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-merged_res-35:/drawable_number_picker_divider.xml.flat",
+        "source": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-main-37:/drawable/number_picker_divider.xml"
+    },
+    {
+        "merged": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-merged_res-35:/layout_item_category_legend.xml.flat",
+        "source": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-main-37:/layout/item_category_legend.xml"
+    },
+    {
+        "merged": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-merged_res-35:/layout_dialog_month_year_picker.xml.flat",
+        "source": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-main-37:/layout/dialog_month_year_picker.xml"
+    },
+    {
+        "merged": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-merged_res-35:/mipmap-xxxhdpi_ic_launcher_round.xml.flat",
+        "source": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-main-37:/mipmap-xxxhdpi/ic_launcher_round.xml"
+    },
+    {
+        "merged": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-merged_res-35:/menu_main_menu.xml.flat",
+        "source": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-main-37:/menu/main_menu.xml"
+    },
+    {
+        "merged": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-merged_res-35:/drawable_transparent_navigation_bar.xml.flat",
+        "source": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-main-37:/drawable/transparent_navigation_bar.xml"
+    },
+    {
+        "merged": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-merged_res-35:/mipmap-xxhdpi_ic_launcher_round.xml.flat",
+        "source": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-main-37:/mipmap-xxhdpi/ic_launcher_round.xml"
+    },
+    {
+        "merged": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-merged_res-35:/mipmap-xxhdpi_ic_launcher.xml.flat",
+        "source": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-main-37:/mipmap-xxhdpi/ic_launcher.xml"
+    },
+    {
+        "merged": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-merged_res-35:/layout_dialog_add_income.xml.flat",
+        "source": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-main-37:/layout/dialog_add_income.xml"
+    },
+    {
+        "merged": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-merged_res-35:/drawable_label_background.xml.flat",
+        "source": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-main-37:/drawable/label_background.xml"
+    },
+    {
+        "merged": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-merged_res-35:/layout_spinner_dropdown_item_with_edit.xml.flat",
+        "source": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-main-37:/layout/spinner_dropdown_item_with_edit.xml"
+    },
+    {
+        "merged": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-merged_res-35:/mipmap-hdpi_ic_launcher_round.xml.flat",
+        "source": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-main-37:/mipmap-hdpi/ic_launcher_round.xml"
+    },
+    {
+        "merged": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-merged_res-35:/drawable_vertical_separator.xml.flat",
+        "source": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-main-37:/drawable/vertical_separator.xml"
+    },
+    {
+        "merged": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-merged_res-35:/mipmap-mdpi_ic_launcher_round.xml.flat",
+        "source": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-main-37:/mipmap-mdpi/ic_launcher_round.xml"
+    },
+    {
+        "merged": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-merged_res-35:/drawable_chart_background.xml.flat",
+        "source": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-main-37:/drawable/chart_background.xml"
+    },
+    {
+        "merged": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-merged_res-35:/mipmap-xxxhdpi_ic_launcher.xml.flat",
+        "source": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-main-37:/mipmap-xxxhdpi/ic_launcher.xml"
+    }
+]

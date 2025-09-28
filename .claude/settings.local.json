@@ -1,0 +1,30 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(/home/malem/Android/**)",
+      "Bash(mkdir:*)",
+      "Bash(wget:*)",
+      "Bash(export ANDROID_HOME=/home/malem/Android/sdk)",
+      "Bash(export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/platform-tools)",
+      "Bash(./gradlew:*)",
+      "Bash(tree:*)",
+      "Read(//home/malem/Android/sdk/**)",
+      "Read(//home/malem/**)",
+      "Bash(sudo gpasswd:*)",
+      "Bash(/home/malem/Android/sdk/platform-tools/adb logcat:*)",
+      "Bash(/home/malem/Android/sdk/platform-tools/adb install -r app/build/outputs/apk/debug/app-debug.apk)",
+      "Bash(/home/malem/Android/sdk/platform-tools/adb shell pm clear:*)",
+      "Bash(/home/malem/Android/sdk/platform-tools/adb shell am start -n com.flowpocket/.MainActivity)",
+      "Bash(/home/malem/Android/sdk/platform-tools/adb shell input keyevent KEYCODE_BACK)",
+      "Bash(/home/malem/Android/sdk/platform-tools/adb shell \"dumpsys activity activities | grep -A 5 -B 5 ''com.flowpocket''\")",
+      "Bash(/home/malem/Android/sdk/platform-tools/adb shell \"find /data/data/com.flowpocket/ -name ''*.db'' 2>/dev/null || echo ''Database not found''\")",
+      "Bash(/home/malem/Android/sdk/platform-tools/adb shell:*)",
+      "Bash(/home/malem/Android/sdk/platform-tools/adb install -r app/build/outputs/apk/debug/flow-pocket-debug-1.0.apk)",
+      "Bash(/home/malem/Android/sdk/platform-tools/adb install:*)",
+      "Bash(adb uninstall:*)",
+      "Bash(adb shell pm clear:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

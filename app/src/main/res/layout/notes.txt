@@ -1,0 +1,120 @@
+./gradlew clean
+./gradlew installDebug
+
+adb uninstall com.flowpocket
+./gradlew installDebug
+
+./gradlew installDebug
+
+export ANDROID_HOME=/home/malem/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/platform-tools
+alias start-emulator="/home/malem/Android/sdk/emulator/emulator -avd s23_ultra_like"
+
+run start-emulator
+
+
+/home/malem/Android/sdk/emulator/emulator -avd test_device
+
+ /home/malem/Android/sdk/emulator/emulator -avd test_device -skin 768x1280
+
+
+ check this
+  now it's september. or when october starts does the income/expece and
+  all the list automally reset for new month?
+  if not how can we have it.
+  right above the income filed, can we have a very small month/year
+  picker, which by default to this curent month, and when new month
+  starts, it reset reset the expeses and income. and if we select previous
+  month, it should bing up the records, likeincome, expece, recent for
+  that month etc.
+  note: recent and view all are month wise. not throiught all time
+
+
+  
+
+  Top 5 Feature Recommendations
+
+  1. 📅 Monthly Budget & Planning System
+
+  Priority: High | Impact: High
+
+  Features:
+  - Set monthly budgets per category
+  - Budget vs actual spending visualization
+  - Progress bars showing budget consumption
+  - Budget alerts when approaching limits
+  - Rollover unused budget to next month
+
+  Implementation:
+  - New MonthlyBudget entity
+  - Budget tracking in existing charts
+  - Notification system for budget alerts
+
+  ---
+  2. 📊 Advanced Date Range Analytics
+
+  Priority: High | Impact: High
+
+  Features:
+  - Month/Year picker for historical data
+  - Compare month-to-month trends
+  - Yearly spending patterns
+  - Category spending trends over time
+  - Export reports as PDF/CSV
+
+  Implementation:
+  - Month/Year selection UI components
+  - Historical data aggregation queries
+  - Trend calculation utilities
+  - Export functionality
+
+  ---
+  3. 🔍 Smart Search & Filtering
+
+  Priority: Medium | Impact: High
+
+  Features:
+  - Search expenses by name, amount, date range
+  - Advanced filters (category, amount range, date)
+  - Recently searched filters
+  - Saved filter presets
+  - Quick filter buttons (This Week, Last Month, etc.)
+
+  Implementation:
+  - Enhanced DAO queries with search parameters
+  - Filter state management
+  - Search history persistence
+
+  ---
+  4. 💾 Data Backup & Sync
+
+  Priority: Medium | Impact: Medium
+
+  Features:
+  - Local data export (JSON/CSV)
+  - Cloud backup integration (Google Drive)
+  - Data import from other apps
+  - Automated backup scheduling
+  - Data restore functionality
+
+  Implementation:
+  - Export/Import utilities
+  - Cloud storage integration
+  - Background backup service
+
+  ---
+  5. 🎯 Smart Expense Insights
+
+  Priority: Low | Impact: High
+
+  Features:
+  - Spending pattern analysis (weekday vs weekend)
+  - Category spending recommendations
+  - Unusual spending alerts
+  - Monthly spending predictions
+  - Personalized saving tips
+
+  Implementation:
+  - Analytics engine for pattern detection
+  - Machine learning for predictions
+  - Notification system for insights
