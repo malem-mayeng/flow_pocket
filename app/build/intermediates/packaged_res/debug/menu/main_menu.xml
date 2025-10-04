@@ -16,4 +16,9 @@
         android:id="@+id/action_budget_management"
         android:title="Budget Management"
         app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_export_data"
+        android:title="Export Data"
+        app:showAsAction="never" />
 </menu>

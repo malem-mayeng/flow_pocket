@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:2:1-46:12
-INJECTED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:2:1-46:12
-INJECTED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:2:1-46:12
-INJECTED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:2:1-46:12
+ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:2:1-53:12
+INJECTED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:2:1-53:12
+INJECTED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:2:1-53:12
+INJECTED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:2:1-53:12
 MERGED from [com.google.android.material:material:1.9.0] /home/malem/.gradle/caches/transforms-3/1072879069efd070fb6992aa0ec3c2d9/transformed/material-1.9.0/AndroidManifest.xml:17:1-26:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /home/malem/.gradle/caches/transforms-3/4b929ab10fd806b94f86bd527f89dd0a/transformed/constraintlayout-2.1.4/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /home/malem/.gradle/caches/transforms-3/e5ed6143adbb4e76284add51ce427304/transformed/appcompat-resources-1.6.1/AndroidManifest.xml:17:1-22:12
@@ -49,25 +49,39 @@ MERGED from [androidx.documentfile:documentfile:1.0.0] /home/malem/.gradle/cache
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/malem/.gradle/caches/transforms-3/4a128805ae54552b7183634231e39ff5/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] /home/malem/.gradle/caches/transforms-3/ae4109ec1e873f2074e4c3a60211a759/transformed/print-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.3.0] /home/malem/.gradle/caches/transforms-3/9d8d7feb3580355ffff343143a4678dc/transformed/annotation-experimental-1.3.0/AndroidManifest.xml:17:1-22:12
-INJECTED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:2:1-46:12
-INJECTED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:2:1-46:12
-INJECTED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:2:1-46:12
+INJECTED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:2:1-53:12
+INJECTED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:2:1-53:12
+INJECTED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:2:1-53:12
 	package
-		ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:3:5-29
+		ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:4:5-29
 		INJECTED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml
 		INJECTED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml
-		ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:2:1-46:12
+		ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:2:1-53:12
 		INJECTED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml
+	xmlns:tools
+		ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml
-		ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:2:1-46:12
+		ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:2:1-53:12
 		INJECTED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:7:5-8:38
+	android:maxSdkVersion
+		ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:8:9-35
+	android:name
+		ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:7:22-78
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:9:5-10:38
+	android:maxSdkVersion
+		ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:10:9-35
+	android:name
+		ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:9:22-77
 application
-ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:5:5-45:19
+ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:12:5-52:19
 MERGED from [com.google.android.material:material:1.9.0] /home/malem/.gradle/caches/transforms-3/1072879069efd070fb6992aa0ec3c2d9/transformed/material-1.9.0/AndroidManifest.xml:24:5-20
 MERGED from [com.google.android.material:material:1.9.0] /home/malem/.gradle/caches/transforms-3/1072879069efd070fb6992aa0ec3c2d9/transformed/material-1.9.0/AndroidManifest.xml:24:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /home/malem/.gradle/caches/transforms-3/4b929ab10fd806b94f86bd527f89dd0a/transformed/constraintlayout-2.1.4/AndroidManifest.xml:9:5-20
@@ -89,71 +103,71 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/malem
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.9.0] /home/malem/.gradle/caches/transforms-3/ec4f76f6c0c02de8ba18086e7bd9baf5/transformed/core-1.9.0/AndroidManifest.xml:28:18-86
 	android:label
-		ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:9:9-41
+		ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:16:9-41
 	android:icon
-		ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:8:9-43
+		ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:15:9-43
 	android:allowBackup
-		ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:7:9-35
+		ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:14:9-35
 	android:theme
-		ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:10:9-48
+		ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:17:9-48
 	android:name
-		ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:6:9-38
+		ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:13:9-38
 activity#com.flowpocket.MainActivity
-ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:12:9-19:20
+ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:19:9-26:20
 	android:exported
-		ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:14:13-36
+		ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:21:13-36
 	android:name
-		ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:13:13-41
+		ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:20:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:15:13-18:29
+ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:22:13-25:29
 action#android.intent.action.MAIN
-ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:16:17-69
+ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:23:17-69
 	android:name
-		ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:16:25-66
+		ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:23:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:17:17-77
+ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:24:17-77
 	android:name
-		ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:17:27-74
+		ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:24:27-74
 activity#com.flowpocket.ChartActivity
-ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:21:9-24:58
+ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:28:9-31:58
 	android:parentActivityName
-		ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:24:13-55
+		ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:31:13-55
 	android:exported
-		ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:23:13-37
+		ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:30:13-37
 	android:name
-		ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:22:13-42
+		ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:29:13-42
 activity#com.flowpocket.StatisticsActivity
-ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:26:9-29:58
+ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:33:9-36:58
 	android:parentActivityName
-		ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:29:13-55
+		ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:36:13-55
 	android:exported
-		ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:28:13-37
+		ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:35:13-37
 	android:name
-		ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:27:13-47
+		ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:34:13-47
 activity#com.flowpocket.AllExpensesActivity
-ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:31:9-34:58
+ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:38:9-41:58
 	android:parentActivityName
-		ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:34:13-55
+		ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:41:13-55
 	android:exported
-		ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:33:13-37
+		ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:40:13-37
 	android:name
-		ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:32:13-48
+		ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:39:13-48
 activity#com.flowpocket.CategoryChartActivity
-ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:36:9-39:81
+ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:43:9-46:81
 	android:exported
-		ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:38:13-37
+		ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:45:13-37
 	android:theme
-		ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:39:13-78
+		ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:46:13-78
 	android:name
-		ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:37:13-50
+		ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:44:13-50
 activity#com.flowpocket.BudgetManagementActivity
-ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:41:9-44:58
+ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:48:9-51:58
 	android:parentActivityName
-		ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:44:13-55
+		ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:51:13-55
 	android:exported
-		ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:43:13-37
+		ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:50:13-37
 	android:name
-		ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:42:13-53
+		ADDED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml:49:13-53
 uses-sdk
 INJECTED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/malem/workspace/flow_pocket/app/src/main/AndroidManifest.xml

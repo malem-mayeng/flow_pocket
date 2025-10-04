@@ -136,6 +136,19 @@ public final class ExpenseDao_Impl implements ExpenseDao {
   }
 
   @Override
+  public long insertExpenseSync(final Expense expense) {
+    __db.assertNotSuspendingTransaction();
+    __db.beginTransaction();
+    try {
+      long _result = __insertionAdapterOfExpense.insertAndReturnId(expense);
+      __db.setTransactionSuccessful();
+      return _result;
+    } finally {
+      __db.endTransaction();
+    }
+  }
+
+  @Override
   public void delete(final Expense expense) {
     __db.assertNotSuspendingTransaction();
     __db.beginTransaction();
