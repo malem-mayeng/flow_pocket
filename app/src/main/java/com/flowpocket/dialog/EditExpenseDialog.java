@@ -17,6 +17,7 @@ import com.flowpocket.entities.Expense;
 import com.flowpocket.entities.ExpenseLabel;
 import com.flowpocket.viewmodel.ExpenseViewModel;
 import com.flowpocket.dialog.CategoryManagementDialog;
+import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
@@ -59,6 +60,9 @@ public class EditExpenseDialog extends DialogFragment {
         TextInputEditText amountInput = view.findViewById(R.id.expense_amount_input);
         Spinner categorySpinner = view.findViewById(R.id.expense_category_spinner);
         ImageView closeButton = view.findViewById(R.id.close_button);
+        MaterialButton saveButton = view.findViewById(R.id.btn_save);
+        MaterialButton cancelButton = view.findViewById(R.id.btn_cancel);
+        MaterialButton deleteButton = view.findViewById(R.id.btn_delete);
 
         // Pre-fill existing data
         if (expense != null) {
@@ -78,26 +82,21 @@ public class EditExpenseDialog extends DialogFragment {
         // Setup category spinner with database categories
         setupCategorySpinner(categorySpinner, expense);
 
-        AlertDialog alertDialog = builder.setView(view)
-               .setPositiveButton("Save", null)
-               .setNegativeButton("Delete", null)
-               .create();
+        AlertDialog alertDialog = builder.setView(view).create();
+
+        // Set button listeners
+        saveButton.setOnClickListener(v -> {
+            updateExpense(nameInput, amountInput, categorySpinner, alertDialog);
+        });
+
+        cancelButton.setOnClickListener(v -> alertDialog.dismiss());
+
+        deleteButton.setOnClickListener(v -> {
+            showDeleteConfirmation(alertDialog);
+        });
 
         // Set close button listener
         closeButton.setOnClickListener(v -> alertDialog.dismiss());
-
-        // Set button listeners after dialog creation
-        alertDialog.setOnShowListener(dialogInterface -> {
-            // Save button
-            alertDialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener(v -> {
-                updateExpense(nameInput, amountInput, categorySpinner, alertDialog);
-            });
-
-            // Delete button
-            alertDialog.getButton(AlertDialog.BUTTON_NEGATIVE).setOnClickListener(v -> {
-                showDeleteConfirmation(alertDialog);
-            });
-        });
 
         // Allow dismissal by clicking outside
         alertDialog.setCanceledOnTouchOutside(true);

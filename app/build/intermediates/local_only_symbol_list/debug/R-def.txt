@@ -36,6 +36,7 @@ id btn_add_budget
 id btn_add_lent
 id btn_cancel
 id btn_create_first_budget
+id btn_delete
 id btn_edit_budget
 id btn_menu
 id btn_next_budget_month
@@ -141,6 +142,7 @@ layout dialog_add_income
 layout dialog_add_loan
 layout dialog_category_management
 layout dialog_edit_expense
+layout dialog_edit_loan
 layout dialog_month_year_picker
 layout drawer_header
 layout expense_item

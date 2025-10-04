@@ -40,6 +40,10 @@
         "source": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-main-37:/mipmap-xxxhdpi/ic_launcher.png"
     },
     {
+        "merged": "com.flowpocket.app-merged_res-35:/layout_dialog_edit_expense.xml.flat",
+        "source": "com.flowpocket.app-main-37:/layout/dialog_edit_expense.xml"
+    },
+    {
         "merged": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-merged_res-35:/layout_activity_statistics.xml.flat",
         "source": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-main-37:/layout/activity_statistics.xml"
     },
@@ -84,12 +88,12 @@
         "source": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-main-37:/drawable/picker_column_background.xml"
     },
     {
-        "merged": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-merged_res-35:/drawable_circle_background.xml.flat",
-        "source": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-main-37:/drawable/circle_background.xml"
+        "merged": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-merged_res-35:/layout_dialog_edit_loan.xml.flat",
+        "source": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-main-37:/layout/dialog_edit_loan.xml"
     },
     {
-        "merged": "com.flowpocket.app-merged_res-35:/layout_bottom_sheet_add_menu.xml.flat",
-        "source": "com.flowpocket.app-main-37:/layout/bottom_sheet_add_menu.xml"
+        "merged": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-merged_res-35:/drawable_circle_background.xml.flat",
+        "source": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-main-37:/drawable/circle_background.xml"
     },
     {
         "merged": "/home/malem/.gradle/daemon/7.5/com.flowpocket.app-merged_res-35:/menu_drawer_menu.xml.flat",

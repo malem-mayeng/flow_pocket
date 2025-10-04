@@ -7,10 +7,13 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
+import androidx.fragment.app.FragmentActivity;
 import androidx.lifecycle.LifecycleOwner;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.flowpocket.R;
+import com.flowpocket.dialog.EditLoanDialog;
+import com.flowpocket.entities.Loan;
 import com.flowpocket.viewmodel.LoanViewModel;
 import com.google.android.material.button.MaterialButton;
 
@@ -119,6 +122,11 @@ public class CardPagerAdapter extends RecyclerView.Adapter<CardPagerAdapter.Card
                 loanViewModel.toggleSettled(loan);
             });
 
+            // Handle item click to edit
+            holder.borrowedAdapter.setOnLoanClickListener(loan -> {
+                showEditLoanDialog(loan);
+            });
+
             // Set up observers only once
             loanViewModel.getBorrowedLoans().observe(lifecycleOwner, loans -> {
                 android.util.Log.d("CardPagerAdapter", "Borrowed loans updated: count=" + (loans != null ? loans.size() : 0));
@@ -164,6 +172,11 @@ public class CardPagerAdapter extends RecyclerView.Adapter<CardPagerAdapter.Card
                 loanViewModel.toggleSettled(loan);
             });
 
+            // Handle item click to edit
+            holder.lentAdapter.setOnLoanClickListener(loan -> {
+                showEditLoanDialog(loan);
+            });
+
             // Set up observers only once
             loanViewModel.getLentLoans().observe(lifecycleOwner, loans -> {
                 android.util.Log.d("CardPagerAdapter", "Lent loans updated: count=" + (loans != null ? loans.size() : 0));
@@ -189,6 +202,25 @@ public class CardPagerAdapter extends RecyclerView.Adapter<CardPagerAdapter.Card
         // Wire add button
         if (addButton != null && actionListener != null) {
             addButton.setOnClickListener(v -> actionListener.onAddLentClick());
+        }
+    }
+
+    private void showEditLoanDialog(Loan loan) {
+        if (lifecycleOwner instanceof FragmentActivity) {
+            FragmentActivity activity = (FragmentActivity) lifecycleOwner;
+            EditLoanDialog dialog = EditLoanDialog.newInstance(loan);
+            dialog.setOnLoanUpdatedListener(new EditLoanDialog.OnLoanUpdatedListener() {
+                @Override
+                public void onLoanUpdated() {
+                    // Data will auto-refresh via LiveData observers
+                }
+
+                @Override
+                public void onLoanDeleted() {
+                    // Data will auto-refresh via LiveData observers
+                }
+            });
+            dialog.show(activity.getSupportFragmentManager(), "EditLoan");
         }
     }
 
