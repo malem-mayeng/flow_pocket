@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_dashboard"
+            android:icon="@android:drawable/ic_menu_view"
+            android:title="Dashboard" />
+
+        <item
+            android:id="@+id/nav_export"
+            android:icon="@android:drawable/ic_menu_upload"
+            android:title="Export Data" />
+
+        <item
+            android:id="@+id/nav_import"
+            android:icon="@android:drawable/ic_menu_upload_you_tube"
+            android:title="Import Data" />
+
+        <item
+            android:id="@+id/nav_budget"
+            android:icon="@android:drawable/ic_menu_month"
+            android:title="Budget Management" />
+
+        <item
+            android:id="@+id/nav_statistics"
+            android:icon="@android:drawable/ic_menu_sort_by_size"
+            android:title="Statistics" />
+
+        <item
+            android:id="@+id/nav_category_chart"
+            android:icon="@android:drawable/ic_menu_gallery"
+            android:title="Category Chart" />
+    </group>
+
+    <item android:title="Settings">
+        <menu>
+            <item
+                android:id="@+id/nav_settings"
+                android:icon="@android:drawable/ic_menu_preferences"
+                android:title="Settings" />
+
+            <item
+                android:id="@+id/nav_about"
+                android:icon="@android:drawable/ic_menu_info_details"
+                android:title="About" />
+        </menu>
+    </item>
+
+</menu>

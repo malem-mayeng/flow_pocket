@@ -8,6 +8,14 @@
         android:minSdkVersion="24"
         android:targetSdkVersion="33" />
 
+    <!-- Storage permissions for older Android versions -->
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+
     <permission
         android:name="com.flowpocket.debug.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
         android:protectionLevel="signature" />

@@ -139,6 +139,19 @@ public final class ExpenseLabelDao_Impl implements ExpenseLabelDao {
   }
 
   @Override
+  public long insertLabelSync(final ExpenseLabel label) {
+    __db.assertNotSuspendingTransaction();
+    __db.beginTransaction();
+    try {
+      long _result = __insertionAdapterOfExpenseLabel.insertAndReturnId(label);
+      __db.setTransactionSuccessful();
+      return _result;
+    } finally {
+      __db.endTransaction();
+    }
+  }
+
+  @Override
   public void delete(final ExpenseLabel label) {
     __db.assertNotSuspendingTransaction();
     __db.beginTransaction();
@@ -425,6 +438,64 @@ public final class ExpenseLabelDao_Impl implements ExpenseLabelDao {
         _result = _cursor.getInt(0);
       } else {
         _result = 0;
+      }
+      return _result;
+    } finally {
+      _cursor.close();
+      _statement.release();
+    }
+  }
+
+  @Override
+  public List<ExpenseLabel> getAllLabelsSync() {
+    final String _sql = "SELECT * FROM expense_labels";
+    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);
+    __db.assertNotSuspendingTransaction();
+    final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
+    try {
+      final int _cursorIndexOfId = CursorUtil.getColumnIndexOrThrow(_cursor, "id");
+      final int _cursorIndexOfName = CursorUtil.getColumnIndexOrThrow(_cursor, "name");
+      final int _cursorIndexOfColor = CursorUtil.getColumnIndexOrThrow(_cursor, "color");
+      final int _cursorIndexOfCreatedAt = CursorUtil.getColumnIndexOrThrow(_cursor, "created_at");
+      final int _cursorIndexOfUpdatedAt = CursorUtil.getColumnIndexOrThrow(_cursor, "updated_at");
+      final List<ExpenseLabel> _result = new ArrayList<ExpenseLabel>(_cursor.getCount());
+      while(_cursor.moveToNext()) {
+        final ExpenseLabel _item;
+        final String _tmpName;
+        if (_cursor.isNull(_cursorIndexOfName)) {
+          _tmpName = null;
+        } else {
+          _tmpName = _cursor.getString(_cursorIndexOfName);
+        }
+        final String _tmpColor;
+        if (_cursor.isNull(_cursorIndexOfColor)) {
+          _tmpColor = null;
+        } else {
+          _tmpColor = _cursor.getString(_cursorIndexOfColor);
+        }
+        _item = new ExpenseLabel(_tmpName,_tmpColor);
+        final int _tmpId;
+        _tmpId = _cursor.getInt(_cursorIndexOfId);
+        _item.setId(_tmpId);
+        final Date _tmpCreatedAt;
+        final Long _tmp;
+        if (_cursor.isNull(_cursorIndexOfCreatedAt)) {
+          _tmp = null;
+        } else {
+          _tmp = _cursor.getLong(_cursorIndexOfCreatedAt);
+        }
+        _tmpCreatedAt = DateConverter.toDate(_tmp);
+        _item.setCreatedAt(_tmpCreatedAt);
+        final Date _tmpUpdatedAt;
+        final Long _tmp_1;
+        if (_cursor.isNull(_cursorIndexOfUpdatedAt)) {
+          _tmp_1 = null;
+        } else {
+          _tmp_1 = _cursor.getLong(_cursorIndexOfUpdatedAt);
+        }
+        _tmpUpdatedAt = DateConverter.toDate(_tmp_1);
+        _item.setUpdatedAt(_tmpUpdatedAt);
+        _result.add(_item);
       }
       return _result;
     } finally {

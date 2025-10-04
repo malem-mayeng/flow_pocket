@@ -10,6 +10,9 @@ public interface ExpenseLabelDao {
     @Insert
     long insert(ExpenseLabel label);
 
+    @Insert
+    long insertLabelSync(ExpenseLabel label);
+
     @Update
     void update(ExpenseLabel label);
 
@@ -33,4 +36,7 @@ public interface ExpenseLabelDao {
 
     @Query("INSERT INTO expense_labels (name, color, created_at, updated_at) VALUES (:name, :color, :createdAt, :updatedAt)")
     void insertDefault(String name, String color, long createdAt, long updatedAt);
+
+    @Query("SELECT * FROM expense_labels")
+    List<ExpenseLabel> getAllLabelsSync();
 }

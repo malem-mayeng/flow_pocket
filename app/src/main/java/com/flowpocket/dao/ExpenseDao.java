@@ -11,6 +11,9 @@ public interface ExpenseDao {
     @Insert
     long insert(Expense expense);
 
+    @Insert
+    long insertExpenseSync(Expense expense);
+
     @Update
     void update(Expense expense);
 

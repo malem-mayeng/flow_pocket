@@ -23,6 +23,8 @@ import com.flowpocket.dao.ExpenseLabelDao;
 import com.flowpocket.dao.ExpenseLabelDao_Impl;
 import com.flowpocket.dao.IncomeDao;
 import com.flowpocket.dao.IncomeDao_Impl;
+import com.flowpocket.dao.LoanDao;
+import com.flowpocket.dao.LoanDao_Impl;
 import java.lang.Class;
 import java.lang.Override;
 import java.lang.String;
@@ -42,16 +44,19 @@ public final class FlowPocketDatabase_Impl extends FlowPocketDatabase {
 
   private volatile IncomeDao _incomeDao;
 
+  private volatile LoanDao _loanDao;
+
   @Override
   protected SupportSQLiteOpenHelper createOpenHelper(DatabaseConfiguration configuration) {
-    final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(configuration, new RoomOpenHelper.Delegate(2) {
+    final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(configuration, new RoomOpenHelper.Delegate(4) {
       @Override
       public void createAllTables(SupportSQLiteDatabase _db) {
         _db.execSQL("CREATE TABLE IF NOT EXISTS `expense_labels` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `name` TEXT, `color` TEXT, `created_at` INTEGER, `updated_at` INTEGER)");
         _db.execSQL("CREATE TABLE IF NOT EXISTS `expenses` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `name` TEXT, `amount` REAL NOT NULL, `date` INTEGER, `label_id` INTEGER NOT NULL, `created_at` INTEGER, `updated_at` INTEGER)");
         _db.execSQL("CREATE TABLE IF NOT EXISTS `incomes` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `amount` REAL NOT NULL, `month` INTEGER, `created_at` INTEGER, `updated_at` INTEGER)");
+        _db.execSQL("CREATE TABLE IF NOT EXISTS `loans` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `type` TEXT, `person_name` TEXT, `amount` REAL NOT NULL, `transaction_date` INTEGER, `due_date` INTEGER, `is_settled` INTEGER NOT NULL, `settled_date` INTEGER, `notes` TEXT, `created_at` INTEGER, `updated_at` INTEGER)");
         _db.execSQL("CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)");
-        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '940a0c08dacf418c299cf81ae83cf5b7')");
+        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '04184bef6206f751f4fbb32655c30576')");
       }
 
       @Override
@@ -59,6 +64,7 @@ public final class FlowPocketDatabase_Impl extends FlowPocketDatabase {
         _db.execSQL("DROP TABLE IF EXISTS `expense_labels`");
         _db.execSQL("DROP TABLE IF EXISTS `expenses`");
         _db.execSQL("DROP TABLE IF EXISTS `incomes`");
+        _db.execSQL("DROP TABLE IF EXISTS `loans`");
         if (mCallbacks != null) {
           for (int _i = 0, _size = mCallbacks.size(); _i < _size; _i++) {
             mCallbacks.get(_i).onDestructiveMigration(_db);
@@ -144,9 +150,30 @@ public final class FlowPocketDatabase_Impl extends FlowPocketDatabase {
                   + " Expected:\n" + _infoIncomes + "\n"
                   + " Found:\n" + _existingIncomes);
         }
+        final HashMap<String, TableInfo.Column> _columnsLoans = new HashMap<String, TableInfo.Column>(11);
+        _columnsLoans.put("id", new TableInfo.Column("id", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsLoans.put("type", new TableInfo.Column("type", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsLoans.put("person_name", new TableInfo.Column("person_name", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsLoans.put("amount", new TableInfo.Column("amount", "REAL", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsLoans.put("transaction_date", new TableInfo.Column("transaction_date", "INTEGER", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsLoans.put("due_date", new TableInfo.Column("due_date", "INTEGER", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsLoans.put("is_settled", new TableInfo.Column("is_settled", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsLoans.put("settled_date", new TableInfo.Column("settled_date", "INTEGER", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsLoans.put("notes", new TableInfo.Column("notes", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsLoans.put("created_at", new TableInfo.Column("created_at", "INTEGER", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsLoans.put("updated_at", new TableInfo.Column("updated_at", "INTEGER", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        final HashSet<TableInfo.ForeignKey> _foreignKeysLoans = new HashSet<TableInfo.ForeignKey>(0);
+        final HashSet<TableInfo.Index> _indicesLoans = new HashSet<TableInfo.Index>(0);
+        final TableInfo _infoLoans = new TableInfo("loans", _columnsLoans, _foreignKeysLoans, _indicesLoans);
+        final TableInfo _existingLoans = TableInfo.read(_db, "loans");
+        if (! _infoLoans.equals(_existingLoans)) {
+          return new RoomOpenHelper.ValidationResult(false, "loans(com.flowpocket.entities.Loan).\n"
+                  + " Expected:\n" + _infoLoans + "\n"
+                  + " Found:\n" + _existingLoans);
+        }
         return new RoomOpenHelper.ValidationResult(true, null);
       }
-    }, "940a0c08dacf418c299cf81ae83cf5b7", "0003c0b76357cc8132b1913c4be0aaca");
+    }, "04184bef6206f751f4fbb32655c30576", "28de1cfed040b3f4b3b62c1a3145b643");
     final SupportSQLiteOpenHelper.Configuration _sqliteConfig = SupportSQLiteOpenHelper.Configuration.builder(configuration.context)
         .name(configuration.name)
         .callback(_openCallback)
@@ -159,7 +186,7 @@ public final class FlowPocketDatabase_Impl extends FlowPocketDatabase {
   protected InvalidationTracker createInvalidationTracker() {
     final HashMap<String, String> _shadowTablesMap = new HashMap<String, String>(0);
     HashMap<String, Set<String>> _viewTables = new HashMap<String, Set<String>>(0);
-    return new InvalidationTracker(this, _shadowTablesMap, _viewTables, "expense_labels","expenses","incomes");
+    return new InvalidationTracker(this, _shadowTablesMap, _viewTables, "expense_labels","expenses","incomes","loans");
   }
 
   @Override
@@ -171,6 +198,7 @@ public final class FlowPocketDatabase_Impl extends FlowPocketDatabase {
       _db.execSQL("DELETE FROM `expense_labels`");
       _db.execSQL("DELETE FROM `expenses`");
       _db.execSQL("DELETE FROM `incomes`");
+      _db.execSQL("DELETE FROM `loans`");
       super.setTransactionSuccessful();
     } finally {
       super.endTransaction();
@@ -187,6 +215,7 @@ public final class FlowPocketDatabase_Impl extends FlowPocketDatabase {
     _typeConvertersMap.put(ExpenseLabelDao.class, ExpenseLabelDao_Impl.getRequiredConverters());
     _typeConvertersMap.put(ExpenseDao.class, ExpenseDao_Impl.getRequiredConverters());
     _typeConvertersMap.put(IncomeDao.class, IncomeDao_Impl.getRequiredConverters());
+    _typeConvertersMap.put(LoanDao.class, LoanDao_Impl.getRequiredConverters());
     return _typeConvertersMap;
   }
 
@@ -240,6 +269,20 @@ public final class FlowPocketDatabase_Impl extends FlowPocketDatabase {
           _incomeDao = new IncomeDao_Impl(this);
         }
         return _incomeDao;
+      }
+    }
+  }
+
+  @Override
+  public LoanDao loanDao() {
+    if (_loanDao != null) {
+      return _loanDao;
+    } else {
+      synchronized(this) {
+        if(_loanDao == null) {
+          _loanDao = new LoanDao_Impl(this);
+        }
+        return _loanDao;
       }
     }
   }

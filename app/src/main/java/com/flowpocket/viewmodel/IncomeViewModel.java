@@ -26,4 +26,8 @@ public class IncomeViewModel extends AndroidViewModel {
     public LiveData<Income> getCurrentMonthIncome() {
         return repository.getLatestIncome();
     }
+
+    public LiveData<Income> getIncomeByMonth(Date startDate, Date endDate) {
+        return repository.getIncomeByMonth(startDate, endDate);
+    }
 }

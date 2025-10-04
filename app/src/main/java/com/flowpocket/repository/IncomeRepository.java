@@ -34,4 +34,8 @@ public class IncomeRepository {
     public LiveData<Income> getLatestIncome() {
         return incomeDao.getLatestIncome();
     }
+
+    public LiveData<Income> getIncomeByMonth(Date startDate, Date endDate) {
+        return incomeDao.getIncomeByMonth(startDate, endDate);
+    }
 }

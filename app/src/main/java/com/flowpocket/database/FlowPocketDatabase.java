@@ -14,8 +14,8 @@ import com.flowpocket.util.DateConverter;
 import java.util.concurrent.Executors;
 
 @Database(
-    entities = {ExpenseLabel.class, Expense.class, Income.class},
-    version = 2,
+    entities = {ExpenseLabel.class, Expense.class, Income.class, Loan.class},
+    version = 4,
     exportSchema = false
 )
 @TypeConverters({DateConverter.class})
@@ -25,6 +25,7 @@ public abstract class FlowPocketDatabase extends RoomDatabase {
     public abstract ExpenseLabelDao expenseLabelDao();
     public abstract ExpenseDao expenseDao();
     public abstract IncomeDao incomeDao();
+    public abstract LoanDao loanDao();
     // public abstract MonthlyBudgetDao monthlyBudgetDao();
 
     private static RoomDatabase.Callback roomCallback = new RoomDatabase.Callback() {
@@ -75,13 +76,37 @@ public abstract class FlowPocketDatabase extends RoomDatabase {
         }
     };
 
+    private static final Migration MIGRATION_3_4 = new Migration(3, 4) {
+        @Override
+        public void migrate(@NonNull SupportSQLiteDatabase database) {
+            // Create loans table
+            database.execSQL("CREATE TABLE IF NOT EXISTS loans (" +
+                "id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, " +
+                "type TEXT NOT NULL, " +
+                "person_name TEXT NOT NULL, " +
+                "amount REAL NOT NULL, " +
+                "transaction_date INTEGER NOT NULL, " +
+                "due_date INTEGER, " +
+                "is_settled INTEGER NOT NULL DEFAULT 0, " +
+                "settled_date INTEGER, " +
+                "notes TEXT, " +
+                "created_at INTEGER NOT NULL, " +
+                "updated_at INTEGER NOT NULL)");
+
+            // Create index for better performance
+            database.execSQL("CREATE INDEX IF NOT EXISTS index_loans_type ON loans(type)");
+            database.execSQL("CREATE INDEX IF NOT EXISTS index_loans_is_settled ON loans(is_settled)");
+        }
+    };
+
     public static synchronized FlowPocketDatabase getInstance(Context context) {
         if (instance == null) {
             instance = Room.databaseBuilder(
                 context.getApplicationContext(),
                 FlowPocketDatabase.class,
                 "flow_pocket_db"
-            ).fallbackToDestructiveMigration()
+            ).addMigrations(MIGRATION_2_3, MIGRATION_3_4)
+            .fallbackToDestructiveMigration()
             .allowMainThreadQueries() // Allow main thread for debugging
             .addCallback(roomCallback)
             .build();
