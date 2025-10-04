@@ -119,6 +119,7 @@ public class LoanAdapter extends RecyclerView.Adapter<LoanAdapter.LoanViewHolder
 
             // Checkbox state
             checkbox.setChecked(loan.isSettled());
+            checkbox.setEnabled(!loan.isSettled()); // Disable checkbox when settled
 
             // Settled info
             if (loan.isSettled()) {

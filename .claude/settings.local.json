@@ -50,7 +50,8 @@
       "Bash(app/src/main/res/drawable/app_logo.png)",
       "Bash(for file in /home/malem/workspace/flow_pocket/*.md)",
       "Bash(head:*)",
-      "Bash(done)"
+      "Bash(done)",
+      "Bash(git reset:*)"
     ],
     "deny": [],
     "ask": []

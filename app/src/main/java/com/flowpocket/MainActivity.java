@@ -539,8 +539,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             drawerLayout.closeDrawer(GravityCompat.START);
             return true;
         } else if (id == R.id.nav_statistics) {
-            Intent intent = new Intent(this, StatisticsActivity.class);
-            startActivity(intent);
+            Toast.makeText(this, "Statistics - Coming Soon", Toast.LENGTH_SHORT).show();
             drawerLayout.closeDrawer(GravityCompat.START);
             return true;
         } else if (id == R.id.nav_category_chart) {
@@ -564,9 +563,19 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
     private void showAboutDialog() {
+        android.text.SpannableString message = new android.text.SpannableString(
+            "Flow Pocket\nVersion 1.0\n\nPersonal Finance Tracker\n\nDeveloped by malem_mayeng\n\n© 2025 Flow Pocket"
+        );
+
+        // Apply italic style to "malem_mayeng"
+        int start = message.toString().indexOf("malem_mayeng");
+        int end = start + "malem_mayeng".length();
+        message.setSpan(new android.text.style.StyleSpan(android.graphics.Typeface.ITALIC),
+                       start, end, android.text.Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+
         new androidx.appcompat.app.AlertDialog.Builder(this)
             .setTitle("About Flow Pocket")
-            .setMessage("Flow Pocket\nVersion 1.0\n\nPersonal Finance Tracker\n\n© 2025 Flow Pocket")
+            .setMessage(message)
             .setPositiveButton("OK", null)
             .show();
     }
