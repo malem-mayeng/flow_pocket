@@ -59,9 +59,9 @@ public class LoanRepository {
         return loanDao.getTotalLentPending();
     }
 
-    public void toggleSettled(Loan loan) {
+    public void toggleSettled(Loan loan, boolean isSettled) {
         executorService.execute(() -> {
-            loan.setSettled(!loan.isSettled());
+            loan.setSettled(isSettled);
             loanDao.update(loan);
         });
     }

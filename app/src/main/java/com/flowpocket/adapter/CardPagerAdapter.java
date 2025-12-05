@@ -119,7 +119,7 @@ public class CardPagerAdapter extends RecyclerView.Adapter<CardPagerAdapter.Card
 
             // Handle checkbox toggle
             holder.borrowedAdapter.setOnLoanCheckListener((loan, isChecked) -> {
-                loanViewModel.toggleSettled(loan);
+                loanViewModel.toggleSettled(loan, isChecked);
             });
 
             // Handle item click to edit
@@ -169,7 +169,7 @@ public class CardPagerAdapter extends RecyclerView.Adapter<CardPagerAdapter.Card
 
             // Handle checkbox toggle
             holder.lentAdapter.setOnLoanCheckListener((loan, isChecked) -> {
-                loanViewModel.toggleSettled(loan);
+                loanViewModel.toggleSettled(loan, isChecked);
             });
 
             // Handle item click to edit

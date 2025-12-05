@@ -55,7 +55,7 @@ public class LoanViewModel extends AndroidViewModel {
         return repository.getTotalLentPending();
     }
 
-    public void toggleSettled(Loan loan) {
-        repository.toggleSettled(loan);
+    public void toggleSettled(Loan loan, boolean isSettled) {
+        repository.toggleSettled(loan, isSettled);
     }
 }
